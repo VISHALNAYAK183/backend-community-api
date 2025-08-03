@@ -1,5 +1,11 @@
 package com.community.backend.entity;
 
+import java.util.Collection;
+import java.util.Collections;
+
+import org.springframework.security.core.GrantedAuthority;
+
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -52,5 +58,30 @@ public class User {
 
     public String getBio() {
         return bio;
+    }
+  public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.emptyList(); // No roles for now
+    }
+
+
+    public String getUsername() {
+        return email;
+    }
+
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    public boolean isEnabled() {
+        return true;
     }
 }
