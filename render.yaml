@@ -9,9 +9,9 @@ services:
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
-      - key: DATABASE_URL
+      - key: SPRING_DATASOURCE_URL
         value: jdbc:postgresql://dpg-cooldb1234.render.com:5432/community_db
-      - key: DATABASE_USERNAME
+      - key: SPRING_DATASOURCE_USERNAME
         value: postgres
-      - key: DATABASE_PASSWORD
+      - key: SPRING_DATASOURCE_PASSWORD
         value: Fncvishu@777
