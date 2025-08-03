@@ -3,9 +3,15 @@ services:
     name: community-backend
     env: java
     plan: free
-    branch: master
+    branch: main
     buildCommand: ./mvnw clean install
     startCommand: java -jar target/*.jar
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
+      - key: DATABASE_URL
+        value: jdbc:postgresql://dpg-cooldb1234.render.com:5432/community_db
+      - key: DATABASE_USERNAME
+        value: postgres
+      - key: DATABASE_PASSWORD
+        value: Fncvishu@777
